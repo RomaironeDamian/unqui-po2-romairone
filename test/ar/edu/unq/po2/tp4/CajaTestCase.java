@@ -34,7 +34,7 @@ class CajaTestCase {
 	}
 	
 	@Test
-	void testPrecio() {
+	void testPrecioDeUnProducto() {
 		assertEquals(50, producto1.precio());
 	}
 	
@@ -52,5 +52,4 @@ class CajaTestCase {
 	void testCajaProductosAmbos() {
 		assertEquals(145 , caja.montoTotalAPagar(productos1));
 	}
-
 }
