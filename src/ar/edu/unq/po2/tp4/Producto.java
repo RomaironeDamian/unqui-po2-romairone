@@ -9,7 +9,6 @@ public abstract class Producto {
 		stock = cantidad;
 	}
 	
-	
 	public double getPrecio() {
 		return precio;
 	}
