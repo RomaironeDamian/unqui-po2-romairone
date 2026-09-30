@@ -7,8 +7,9 @@ public abstract class Factura implements Costo, Agencia{
 	public abstract double precio();
 	
 	public void registrarPago(Factura factura) {
-		
+		Agencia.cantFacturas.add(this);
 	}
+	
 	public void procesar() {
 		this.registrarPago(this);
 	}
