@@ -1,6 +1,6 @@
 package ar.edu.unq.po2.tp4;
 
-public abstract class Producto {
+public abstract class Producto implements Costo{
 	private double precio;
 	private int stock;
 	
@@ -18,5 +18,7 @@ public abstract class Producto {
 	}
 
 	public abstract double precio();
+	
+	public void procesar() {}
 }
 

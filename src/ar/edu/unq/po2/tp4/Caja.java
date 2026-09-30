@@ -3,15 +3,17 @@ import java.util.List;
 
 public class Caja {
 
-	public double montoTotalAPagar(List<Producto> listaACobrar) {
-		/*
+	public double montoTotalAPagar(List<Costo> listaACobrar) {
+		
 		double montoTotal = 0;
-		for (Producto prod : listaDeProductos) {
-			montoTotal = montoTotal + prod.precio();
-		}*/
-		double montoTotal = listaACobrar.stream()
+		for (Costo c : listaACobrar) {
+			c.procesar();
+			montoTotal = montoTotal + c.precio();
+		}
+		/*double montoTotal = listaACobrar.stream()
+		.forEach(Producto -> producto.procesar());
 		.mapToDouble(Producto :: precio)
-		.sum();
+		.sum();*/
 		return montoTotal;
 	} 
 }
