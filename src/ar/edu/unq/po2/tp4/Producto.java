@@ -19,6 +19,8 @@ public abstract class Producto implements Costo{
 
 	public abstract double precio();
 	
-	public void procesar() {}
+	public void procesar(Agencia a) {
+		stock -= 1;
+	}
 }
 

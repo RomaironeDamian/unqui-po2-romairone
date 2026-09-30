@@ -15,14 +15,15 @@ class CajaTestCase {
 	private Producto producto3;
 	private Producto producto4;
 	private Producto producto5;
-	List<Producto> productos1;
-	List<Producto> productos2;
-	List<Producto> productos3;
+	private Afip afip;
+	List<Costo> productos1;
+	List<Costo> productos2;
+	List<Costo> productos3;
 	
 	
 	@BeforeEach
 	public void setUp() throws Exception{
-		caja = new Caja();
+		caja = new Caja(afip);
 		producto1 = new ProductoTradicional(50,10);
 		producto2 = new ProductoTradicional(14,7);
 		producto3 = new ProductoCooperativa(30,5);

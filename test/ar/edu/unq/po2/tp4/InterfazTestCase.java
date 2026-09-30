@@ -14,12 +14,14 @@ class InterfazTestCase {
 	private Producto producto2;
 	private Factura factura1;
 	private Factura factura2;
+	private Afip afip;
 	List<Costo> costos1;
 	List<Costo> costos2;
 	
 	@BeforeEach
 	public void setUp() throws Exception{
-		caja = new Caja();
+		afip = new Afip();
+		caja = new Caja(afip);
 		producto1 = new ProductoTradicional(50,10);
 		producto2 = new ProductoCooperativa(20,7);
 		factura1 = new Servicio(30,5);
@@ -31,11 +33,13 @@ class InterfazTestCase {
 	@Test
 	void testCostos1() {
 		assertEquals(168, caja.montoTotalAPagar(costos1));
+		assertTrue(afip.estadoPagado());
 	}
 	
 	@Test
 	void testCostos2() {
 		assertEquals(118, caja.montoTotalAPagar(costos2));
+		assertTrue(afip.estadoPagado());
 	}
 
 }
