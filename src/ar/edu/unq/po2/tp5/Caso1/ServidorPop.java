@@ -1,4 +1,4 @@
-package ar.edu.unq.po2.tp5;
+package ar.edu.unq.po2.tp5.Caso1;
 
 import java.util.List;
 import java.util.ArrayList;
